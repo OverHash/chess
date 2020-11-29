@@ -1,0 +1,89 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "jsx": true,
+        "useJSXTextNode": true,
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "roblox-ts",
+        "@typescript-eslint/eslint-plugin",
+		"prettier",
+		"simple-import-sort",
+		"jsdoc"
+    ],
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:roblox-ts/recommended"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "warn",
+            {
+                "semi": true,
+                "trailingComma": "all",
+                "singleQuote": true,
+                "printWidth": 120,
+                "tabWidth": 4,
+                "useTabs": true
+            }
+        ],
+        "@typescript-eslint/array-type": [
+            "warn",
+            {
+                "default": "generic",
+                "readonly": "generic"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/ban-ts-comment": [
+			"error",
+			{
+				"ts-expect-error": "allow-with-description",
+				"minimumDescriptionLength": 10
+			}
+		],
+		"simple-import-sort/sort": "error",
+		"prefer-const": [
+			"warn",
+			{
+				"destructuring": "all"
+			}
+		],
+		"no-undef-init": "error",
+		"jsdoc/require-jsdoc": [
+			"error",
+			{
+				"publicOnly": false,
+				"require": {
+					"ArrowFunctionExpression": true,
+					"ClassDeclaration": true,
+					"ClassExpression": true,
+					"FunctionDeclaration": true,
+					"FunctionExpression": true,
+					"MethodDefinition": true
+				}
+			}
+		],
+		"jsdoc/require-returns-description": [
+			"error",
+			{
+
+			}
+		],
+		"jsdoc/require-description-complete-sentence": [
+			"error"
+		],
+		"jsdoc/require-param-type": "off",
+		"jsdoc/require-returns-type": "off"
+    }
+}
