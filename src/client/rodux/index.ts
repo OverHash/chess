@@ -1,5 +1,5 @@
 import Rodux from '@rbxts/rodux';
-import t from '@rbxts/t';
+import { t } from '@rbxts/t';
 
 import { CurrentBoardActions, currentBoardReducer, setupBoard } from './currentBoard';
 
